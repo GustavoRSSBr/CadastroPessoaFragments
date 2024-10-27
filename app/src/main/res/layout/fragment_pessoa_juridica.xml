@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PessoaJuridicaFragment">
+
+    <EditText
+        android:id="@+id/etCnpjPj"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="@string/cnpj"
+        android:inputType="text"
+        android:textColorHint="@color/black"
+        android:importantForAutofill="no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNomePj"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="181dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="39dp"
+        android:ems="10"
+        android:hint="@string/nome"
+        android:inputType="text"
+        android:textColorHint="@color/black"
+        android:importantForAutofill="no"
+        app:layout_constraintBottom_toTopOf="@+id/etEmailPj"
+        app:layout_constraintEnd_toEndOf="@+id/etCnpjPj"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etEmailPj"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="54dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/black"
+        android:importantForAutofill="no"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastrarPj"
+        app:layout_constraintStart_toStartOf="@+id/etNomePj"
+        app:layout_constraintTop_toBottomOf="@+id/etNomePj" />
+
+    <Button
+        android:id="@+id/btnCadastrarPj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="81dp"
+        android:text="@string/cadatrar"
+        app:layout_constraintBottom_toTopOf="@+id/tvListaPj"
+        app:layout_constraintEnd_toEndOf="@+id/etEmailPj"
+        app:layout_constraintTop_toBottomOf="@+id/etEmailPj" />
+
+    <TextView
+        android:id="@+id/tvListaPj"
+        android:layout_width="256dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="92dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCadastrarPj" />
+</androidx.constraintlayout.widget.ConstraintLayout>

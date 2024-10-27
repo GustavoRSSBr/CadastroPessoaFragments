@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pfLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PessoaFisicaFragment">
+
+    <EditText
+        android:id="@+id/etCpfPf"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="23dp"
+        android:ems="10"
+        android:hint="@string/cpf"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/etNomePf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNomePf"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="@string/nome"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/etTelefonePf"
+        app:layout_constraintStart_toStartOf="@+id/etCpfPf"
+        app:layout_constraintTop_toBottomOf="@+id/etCpfPf" />
+
+    <EditText
+        android:id="@+id/etTelefonePf"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="48dp"
+        android:ems="10"
+        android:hint="@string/telefone"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastrarPf"
+        app:layout_constraintStart_toStartOf="@+id/etNomePf"
+        app:layout_constraintTop_toBottomOf="@+id/etNomePf" />
+
+    <TextView
+        android:id="@+id/tvListaPf"
+        android:layout_width="282dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="146dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCadastrarPf" />
+
+    <Button
+        android:id="@+id/btnCadastrarPf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="54dp"
+        android:text="@string/cadatrar"
+        app:layout_constraintBottom_toTopOf="@+id/tvListaPf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTelefonePf" />
+</androidx.constraintlayout.widget.ConstraintLayout>
